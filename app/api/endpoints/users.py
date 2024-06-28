@@ -15,8 +15,8 @@ auth_user_route = APIRouter(
 @auth_user_route.post('/register/')
 async def register_user(user: User):
     user_not_exists = get_user(user.username)
-    if not user_not_exists:
-        USER_DATA.append(user)
+    if user_not_exists is None:
+        USER_DATA.append(user.model_dump())
         return {'message': f'User {user.username} successfully added!'}
     else:
         raise HTTPException(status_code=409, detail='User with that username already exists.')

@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from typing import Annotated
 
-from currency_exchange_API.app.core.security import get_token_by_username, get_user
+from app.core.security import get_token_by_username, get_user
 from ..schemas.user import User
-from currency_exchange_API.app.db.db import USER_DATA
+from app.db.db import USER_DATA
 
 
 auth_user_route = APIRouter(

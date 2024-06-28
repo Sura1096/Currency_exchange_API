@@ -4,7 +4,7 @@ import jwt
 from datetime import datetime, timedelta, UTC
 
 from ..db.db import USER_DATA
-from config import settings
+from .config import settings
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='/auth/login/')

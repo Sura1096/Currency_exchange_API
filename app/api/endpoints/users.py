@@ -34,4 +34,4 @@ async def login(user: Annotated[OAuth2PasswordRequestForm, Depends()]):
         )
 
     token = get_token_by_username(user.username)
-    return {'message': token}
+    return token

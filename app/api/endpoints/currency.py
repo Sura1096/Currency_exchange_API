@@ -27,13 +27,15 @@ async def convert_currency(
         )
     else:
         user_currency = CurrencyAPI()
-        return user_currency.get_convert(
+        result = user_currency.get_convert(
             query_params=CurrencyConvert(
                 to_currency=to_currency,
                 from_currency=from_currency,
                 amount=amount
             )
         )
+
+        return {'rate': result}
 
 
 @currency_route.get('/list')

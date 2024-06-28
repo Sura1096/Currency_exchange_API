@@ -52,7 +52,7 @@ def get_token_by_username(username: str):
 
 
 # Функция получения User'а по токену
-def get_user_from_token(token: str = Depends(oauth2_scheme)):
+def get_user_from_token(token=Depends(oauth2_scheme)):
     try:
         payload = jwt.decode(
             jwt=token,

@@ -18,12 +18,9 @@
 1. Клонировать проект на свою локальную машину:
 
 
-    `git clone https://github.com/Sura1096/Currency_exchange_API.git`
+    `git clone https://github.com/Sura1096/Currency_exchange_API.git`  # HTTPS
 
-или
-
-
-    `git clone git@github.com:Sura1096/Currency_exchange_API.git`
+    `git clone git@github.com:Sura1096/Currency_exchange_API.git`  # SSH
 
 2. Находясь в папке проекта:
 
